@@ -1,0 +1,1433 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鉴黄师电脑版官网-内容审核软件_电脑端使用_版本对比</title>
+<meta name="description" content="鉴黄师电脑版官网提供内容审核软件在电脑端的使用说明、版本对比与场景指南。适合需要批量筛查图片视频、搭建审核流程的团队了解功能与部署方式。">
+<meta name="keywords" content="内容审核软件,图片视频筛查,电脑端审核工具,审核流程搭建,鉴黄师软件">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d2f4f'/%3E%3Ccircle cx='32' cy='30' r='14' fill='none' stroke='%23c9e4ff' stroke-width='4'/%3E%3Cpath d='M24 30l6 6 12-12' fill='none' stroke='%23ffc857' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18 50h28' stroke='%23c9e4ff' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root {
+  --navy: #1d2f4f;
+  --navy-deep: #142138;
+  --navy-soft: #2b4166;
+  --accent: #ffc857;
+  --accent-deep: #e0a92e;
+  --sky: #c9e4ff;
+  --sky-soft: #eaf4ff;
+  --bg: #f5f8fc;
+  --panel: #ffffff;
+  --line: #dbe6f2;
+  --text: #1f2a3a;
+  --text-2: #4e5e75;
+  --text-3: #7b8ba3;
+  --radius-s: 6px;
+  --radius-m: 10px;
+  --radius-l: 16px;
+  --shadow-s: 0 1px 3px rgba(20,33,56,.06);
+  --shadow-m: 0 4px 14px rgba(20,33,56,.08);
+  --shadow-l: 0 10px 30px rgba(20,33,56,.12);
+  --font: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", system-ui, sans-serif;
+  --header-h: 64px;
+  --notice-h: 34px;
+  --sticky-offset: 118px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--sticky-offset); }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--navy-soft); text-decoration: none; }
+a:hover { color: var(--navy); text-decoration: underline; }
+button { font-family: inherit; cursor: pointer; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+img, svg { max-width: 100%; }
+
+/* ========== 吸顶公告条 + 页头 ========== */
+.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-s);
+}
+.notice-bar {
+  height: var(--notice-h);
+  background: linear-gradient(90deg, var(--navy-deep), var(--navy-soft));
+  color: var(--sky);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 16px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.notice-bar strong { color: var(--accent); font-weight: 600; }
+.notice-bar .dot { opacity: .45; }
+.site-header {
+  height: var(--header-h);
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+.header-inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--navy);
+  display: grid;
+  place-items: center;
+  box-shadow: var(--shadow-s);
+}
+.brand-text {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  color: var(--navy);
+  white-space: nowrap;
+}
+.main-nav {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.main-nav a {
+  font-size: 14px;
+  color: var(--text-2);
+  padding: 6px 11px;
+  border-radius: var(--radius-s);
+  white-space: nowrap;
+}
+.main-nav a:hover {
+  background: var(--sky-soft);
+  color: var(--navy);
+  text-decoration: none;
+}
+.header-search {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 6px 4px 14px;
+  gap: 6px;
+}
+.header-search input {
+  border: none;
+  background: transparent;
+  font-size: 13.5px;
+  width: 150px;
+  color: var(--text);
+  outline: none;
+}
+.header-search button {
+  border: none;
+  background: var(--navy);
+  color: #fff;
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  transition: background .2s;
+}
+.header-search button:hover { background: var(--navy-soft); }
+
+/* ========== 首屏 ========== */
+.hero {
+  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 45%, #2e4c78 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -120px;
+  top: -80px;
+  width: 460px;
+  height: 460px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,200,87,.18) 0%, transparent 68%);
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 52px 22px 46px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr);
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--accent);
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  background: rgba(255,200,87,.1);
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,200,87,.25);
+}
+.hero h1 {
+  font-size: clamp(28px, 4vw, 46px);
+  line-height: 1.22;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+.hero-desc {
+  font-size: 15.5px;
+  color: var(--sky);
+  max-width: 620px;
+  margin-bottom: 26px;
+  line-height: 1.85;
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: var(--navy-deep);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  border: none;
+  box-shadow: 0 6px 18px rgba(255,200,87,.3);
+  transition: transform .15s, box-shadow .15s;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 9px 24px rgba(255,200,87,.38); text-decoration: none; color: var(--navy-deep); }
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--sky);
+  font-size: 14.5px;
+  padding: 11px 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(201,228,255,.35);
+  transition: background .2s;
+}
+.btn-ghost:hover { background: rgba(201,228,255,.1); text-decoration: none; color: #fff; }
+.hero-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+.hero-stat strong {
+  display: block;
+  font-size: 24px;
+  color: var(--accent);
+  font-weight: 800;
+  line-height: 1.25;
+}
+.hero-stat span { font-size: 12.5px; color: var(--sky); opacity: .8; }
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.hero-visual .panel {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(201,228,255,.22);
+  border-radius: var(--radius-l);
+  padding: 22px;
+  width: 100%;
+  max-width: 340px;
+  backdrop-filter: blur(4px);
+}
+.hero-visual .panel-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(201,228,255,.14);
+}
+.hero-visual .panel-row:last-child { border-bottom: none; }
+.hero-visual .badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255,200,87,.16);
+  color: var(--accent);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+.hero-visual .panel-row b { display: block; font-size: 14px; color: #fff; font-weight: 600; }
+.hero-visual .panel-row small { font-size: 12px; color: var(--sky); opacity: .75; }
+
+/* ========== 三栏容器 ========== */
+.layout {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 28px 22px 40px;
+  display: grid;
+  grid-template-columns: 176px minmax(0, 1fr) 244px;
+  gap: 26px;
+  align-items: start;
+}
+.col-left { position: sticky; top: var(--sticky-offset); align-self: start; }
+.col-right { position: sticky; top: var(--sticky-offset); align-self: start; }
+
+/* ========== 左栏 ========== */
+.side-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  padding: 14px 12px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-s);
+}
+.side-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text-3);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-left: 4px;
+}
+.channel-nav { list-style: none; }
+.channel-nav li { margin-bottom: 2px; }
+.channel-nav a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: var(--radius-s);
+  font-size: 13.5px;
+  color: var(--text-2);
+  transition: background .15s, color .15s;
+}
+.channel-nav a:hover, .channel-nav a.active {
+  background: var(--sky-soft);
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 600;
+}
+.channel-nav .num {
+  font-size: 11px;
+  color: var(--text-3);
+  background: var(--bg);
+  border-radius: 4px;
+  padding: 0 5px;
+  margin-left: auto;
+  min-width: 20px;
+  text-align: center;
+}
+.channel-nav a:hover .num { background: var(--sky); color: var(--navy); }
+
+.filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.filter-btn {
+  font-size: 12.5px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--text-2);
+  transition: all .15s;
+}
+.filter-btn:hover { border-color: var(--navy-soft); color: var(--navy); }
+.filter-btn.active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+  font-weight: 600;
+}
+.filter-note { font-size: 12px; color: var(--text-3); margin-top: 8px; line-height: 1.5; }
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag-cloud a {
+  font-size: 12px;
+  padding: 4px 9px;
+  border-radius: var(--radius-s);
+  background: var(--sky-soft);
+  color: var(--navy-soft);
+}
+.tag-cloud a:hover { background: var(--sky); text-decoration: none; color: var(--navy); }
+
+/* ========== 中栏板块通用 ========== */
+.section {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  padding: 24px 26px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-s);
+}
+.section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+.section-head h2 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: .5px;
+  line-height: 1.35;
+}
+.section-head .sub {
+  font-size: 12.5px;
+  color: var(--text-3);
+  font-weight: 400;
+  white-space: nowrap;
+  padding-bottom: 2px;
+}
+.section-intro {
+  font-size: 14px;
+  color: var(--text-2);
+  margin-bottom: 16px;
+  line-height: 1.8;
+}
+
+/* 内容简介 */
+.intro-body p { margin-bottom: 12px; font-size: 14.5px; color: var(--text-2); }
+.intro-body p:last-child { margin-bottom: 0; }
+.intro-body strong { color: var(--navy); }
+
+/* 热门卡片网格 */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(228px, 1fr));
+  gap: 14px;
+}
+.content-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  padding: 15px 16px;
+  background: linear-gradient(180deg, #fff, #fbfdff);
+  transition: box-shadow .2s, transform .15s, border-color .2s;
+  display: flex;
+  flex-direction: column;
+}
+.content-card:hover {
+  box-shadow: var(--shadow-m);
+  transform: translateY(-2px);
+  border-color: #c4d7ed;
+}
+.card-type {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  padding: 2px 9px;
+  border-radius: 4px;
+  background: var(--sky-soft);
+  color: var(--navy-soft);
+  margin-bottom: 9px;
+  align-self: flex-start;
+}
+.card-type.hot { background: #fff0d1; color: #8a5b00; }
+.card-type.new { background: #e3f5ea; color: #1c6b3e; }
+.content-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.45;
+  margin-bottom: 8px;
+}
+.card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 9px; }
+.card-tags span {
+  font-size: 11px;
+  color: var(--text-3);
+  background: var(--bg);
+  border-radius: 3px;
+  padding: 1px 7px;
+}
+.card-desc { font-size: 12.8px; color: var(--text-2); line-height: 1.65; flex-grow: 1; margin-bottom: 10px; }
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11.5px;
+  color: var(--text-3);
+  border-top: 1px dashed var(--line);
+  padding-top: 8px;
+}
+.card-meta b { color: var(--accent-deep); font-weight: 700; }
+
+/* 最新更新列表 */
+.update-list { list-style: none; }
+.update-list li {
+  display: flex;
+  gap: 14px;
+  padding: 11px 0;
+  border-bottom: 1px dashed var(--line);
+  align-items: baseline;
+}
+.update-list li:last-child { border-bottom: none; padding-bottom: 0; }
+.update-list .u-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  flex-shrink: 0;
+  min-width: 132px;
+}
+.update-list .u-sum {
+  font-size: 13px;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+.update-list .u-time {
+  margin-left: auto;
+  font-size: 11.5px;
+  color: var(--text-3);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* 分类入口 */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 11px;
+}
+.cat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  background: var(--bg);
+  transition: border-color .2s, background .2s;
+}
+.cat-item:hover { border-color: var(--navy-soft); background: var(--sky-soft); text-decoration: none; }
+.cat-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--navy);
+  color: var(--accent);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+.cat-item b { display: block; font-size: 13.5px; color: var(--navy); font-weight: 700; }
+.cat-item small { font-size: 11.5px; color: var(--text-3); }
+
+/* 深度解析 */
+.deep-body h3 {
+  font-size: 16.5px;
+  color: var(--navy);
+  font-weight: 700
+  margin: 22px 0 10px;
+  padding-left: 12px;
+  border-left: 4px solid var(--accent);
+  line-height: 1.4;
+}
+.deep-body h3:first-of-type { margin-top: 4px; }
+.deep-body p { font-size: 14.2px; color: var(--text-2); margin-bottom: 12px; }
+.deep-body ul, .deep-body ol { margin: 4px 0 16px 20px; }
+.deep-body li { font-size: 14px; color: var(--text-2); margin-bottom: 6px; }
+.deep-body strong { color: var(--navy); }
+
+/* 体验指南步骤 */
+.step-list { list-style: none; counter-reset: step; }
+.step-list li {
+  position: relative;
+  padding: 12px 0 12px 48px;
+  border-bottom: 1px dashed var(--line);
+  counter-increment: step;
+  font-size: 14px;
+  color: var(--text-2);
+}
+.step-list li:last-child { border-bottom: none; }
+.step-list li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 14px;
+  display: grid;
+  place-items: center;
+}
+.step-list b { color: var(--navy); display: block; margin-bottom: 2px; font-size: 14.5px; }
+
+/* FAQ */
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  margin-bottom: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 18px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--navy);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  transition: background .15s;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  font-size: 20px;
+  color: var(--navy-soft);
+  font-weight: 400;
+  line-height: 1;
+  transition: transform .2s;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item summary:hover { background: var(--sky-soft); }
+.faq-body { padding: 0 18px 16px; font-size: 13.8px; color: var(--text-2); line-height: 1.8; }
+
+/* 评论 */
+.comment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+.comment-card {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  padding: 13px 15px;
+}
+.comment-head { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; }
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--navy-soft);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.comment-head b { font-size: 12.5px; color: var(--navy); font-weight: 600; }
+.comment-head .stars { margin-left: auto; color: var(--accent-deep); font-size: 11px; letter-spacing: 1px; }
+.comment-card p { font-size: 12.8px; color: var(--text-2); line-height: 1.65; }
+
+/* 资讯 */
+.news-list { list-style: none; }
+.news-list li {
+  display: flex;
+  gap: 16px;
+  padding: 13px 0;
+  border-bottom: 1px dashed var(--line);
+}
+.news-list li:last-child { border-bottom: none; }
+.news-date {
+  font-size: 12px;
+  color: var(--text-3);
+  white-space: nowrap;
+  min-width: 74px;
+  padding-top: 2px;
+}
+.news-content b { display: block; font-size: 14px; color: var(--navy); font-weight: 700; margin-bottom: 3px; }
+.news-content span { font-size: 12.8px; color: var(--text-2); line-height: 1.6; }
+
+/* 相关推荐标签 */
+.rec-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.rec-tags a {
+  font-size: 13px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--text-2);
+  transition: all .15s;
+}
+.rec-tags a:hover {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 精选证言 */
+.quote-panel {
+  background: linear-gradient(135deg, var(--navy-soft), var(--navy));
+  border-radius: var(--radius-m);
+  padding: 22px 24px;
+  color: var(--sky);
+  position: relative;
+  overflow: hidden;
+}
+.quote-panel::before {
+  content: "“";
+  position: absolute;
+  right: 20px;
+  top: -18px;
+  font-size: 110px;
+  color: rgba(255,200,87,.18);
+  font-family: serif;
+  line-height: 1;
+}
+.quote-panel p { font-size: 14.5px; line-height: 1.8; margin-bottom: 12px; position: relative; z-index: 1; }
+.quote-panel .who { font-size: 12.5px; color: var(--accent); font-weight: 600; }
+
+/* ========== 右栏 ========== */
+.toc-list { list-style: none; }
+.toc-list li { margin-bottom: 2px; }
+.toc-list a {
+  display: block;
+  font-size: 13px;
+  color: var(--text-2);
+  padding: 5px 10px;
+  border-radius: var(--radius-s);
+  border-left: 2px solid transparent;
+  transition: all .15s;
+}
+.toc-list a:hover {
+  background: var(--sky-soft);
+  color: var(--navy);
+  border-left-color: var(--accent);
+  text-decoration: none;
+}
+.hot-list { list-style: none; counter-reset: hot; }
+.hot-list li {
+  counter-increment: hot;
+  display: flex;
+  gap: 9px;
+  padding: 7px 0;
+  font-size: 13px;
+  color: var(--text-2);
+  line-height: 1.5;
+  align-items: baseline;
+}
+.hot-list li::before {
+  content: counter(hot);
+  font-size: 11px;
+  font-weight: 800;
+  color: #fff;
+  background: var(--text-3);
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.hot-list li:nth-child(1)::before { background: #e0a92e; }
+.hot-list li:nth-child(2)::before { background: #5b82b8; }
+.hot-list li:nth-child(3)::before { background: #8a6bbf; }
+.hot-list a { color: var(--text-2); }
+.hot-list a:hover { color: var(--navy); text-decoration: none; }
+
+.side-links { list-style: none; }
+.side-links li { margin-bottom: 6px; }
+.side-links a {
+  font-size: 13px;
+  color: var(--text-2);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 4px;
+  border-radius: var(--radius-s);
+}
+.side-links a:hover { background: var(--sky-soft); color: var(--navy); text-decoration: none; }
+.side-links .arrow { color: var(--accent-deep); font-size: 11px; }
+
+/* ========== 页尾 ========== */
+.site-footer {
+  background: var(--navy-deep);
+  color: var(--sky);
+  margin-top: 10px;
+}
+.footer-inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 40px 22px 22px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+.footer-brand .brand-text { color: #fff; font-size: 19px; }
+.footer-brand p { font-size: 13px; color: rgba(201,228,255,.7); margin-top: 12px; line-height: 1.7; max-width: 280px; }
+.footer-col h4 {
+  font-size: 13.5px;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: .5px;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 7px; }
+.footer-col a { font-size: 13px; color: rgba(201,228,255,.75); }
+.footer-col a:hover { color: #fff; text-decoration: none; }
+.footer-bottom {
+  border-top: 1px solid rgba(201,228,255,.15);
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 16px 22px 24px;
+  font-size: 12px;
+  color: rgba(201,228,255,.55);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-bottom .example-note { color: rgba(201,228,255,.45); }
+
+/* ========== 响应式 ========== */
+@media (max-width: 1100px) {
+  .layout { grid-template-columns: 164px minmax(0, 1fr); }
+  .col-right { display: none; }
+  .hero-inner { grid-template-columns: 1fr; gap: 30px; }
+  .hero-visual { justify-content: flex-start; }
+}
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; padding: 18px 14px 30px; gap: 18px; }
+  .col-left { position: static; }
+  .channel-nav { display: flex; flex-wrap: wrap; gap: 4px; }
+  .channel-nav li { margin-bottom: 0; }
+  .channel-nav a { padding: 6px 10px; font-size: 13px; }
+  .channel-nav .num { display: none; }
+  .side-card { margin-bottom: 12px; }
+  .header-inner { padding: 0 14px; gap: 12px; }
+  .main-nav { display: none; }
+  .header-search { padding-left: 10px; }
+  .header-search input { width: 100px; }
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 24px; padding: 30px 18px 16px; }
+  .hero-inner { padding: 38px 18px 34px; }
+  .hero-stats { gap: 20px; }
+  .section { padding: 18px 16px; }
+  .update-list li { flex-wrap: wrap; gap: 4px 10px; }
+  .update-list .u-name { min-width: 0; }
+  .update-list .u-time { margin-left: 0; }
+}
+@media (max-width: 520px) {
+  .hero h1 { font-size: 27px; }
+  .hero-stats { gap: 16px; }
+  .hero-stat strong { font-size: 20px; }
+  .card-grid { grid-template-columns: 1fr; }
+  .comment-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+  .news-list li { flex-direction: column; gap: 4px; }
+  .section-head { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .section-head .sub { padding-bottom: 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- 吸顶公告条 + 页头 -->
+<div class="sticky-top">
+  <div class="notice-bar" role="status">
+    <strong>版本更新</strong>
+    <span class="dot">·</span>
+    <span>鉴黄师电脑版 v3.2 新增批量视频抽帧审核与自定义敏感词库</span>
+    <span class="dot">·</span>
+    <span>电脑端支持 Windows 10/11 与 macOS 12+</span>
+  </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/#top" class="brand" aria-label="返回首页">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="11" r="6" stroke="#c9e4ff" stroke-width="2"/>
+            <path d="M9 11l2.4 2.4L15.5 9" stroke="#ffc857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 19h12" stroke="#c9e4ff" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-text">鉴黄师电脑版官网</span>
+      </a>
+      <nav class="main-nav" aria-label="主题导航">
+        <a href="/#intro">软件简介</a>
+        <a href="/#hot">热门内容</a>
+        <a href="/#update">最新更新</a>
+        <a href="/#category">分类入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#faq">常见问题</a>
+      </nav>
+      <form class="header-search" role="search" id="search-form">
+        <input type="search" id="search-input" placeholder="搜索内容名称或类型…" aria-label="搜索页面内容">
+        <button type="submit">搜索</button>
+      </form>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-inner">
+      <div>
+        <span class="hero-eyebrow">电脑端内容审核 · 批量筛查 · 流程搭建</span>
+        <h1 id="hero-title">鉴黄师电脑版官网</h1>
+        <p class="hero-desc">
+          面向图片与视频内容审核场景的电脑端工具，支持批量导入、自动抽帧、敏感内容识别与人工复核队列。
+          提供图片视频筛查、审核流程搭建、版本对比三类核心信息，帮助团队快速定位电脑端使用方式与适用条件。
+        </p>
+        <div class="hero-actions">
+          <a href="/#deep" class="btn-primary">查看深度解析 →</a>
+          <a href="/#guide" class="btn-ghost">体验指南</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>12</strong><span>内容板块</span></div>
+          <div class="hero-stat"><strong>6</strong><span>分类方向</span></div>
+          <div class="hero-stat"><strong>3.2</strong><span>当前版本</span></div>
+          <div class="hero-stat"><strong>2</strong><span>系统平台</span></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="panel">
+          <div class="panel-row">
+            <span class="badge">01</span>
+            <div><b>批量图片筛查</b><small>支持 JPG / PNG / WebP，单次 500 张</small></div>
+          </div>
+          <div class="panel-row">
+            <span class="badge">02</span>
+            <div><b>视频抽帧审核</b><small>按秒抽帧，自动标记疑似片段</small></div>
+          </div>
+          <div class="panel-row">
+            <span class="badge">03</span>
+            <div><b>人工复核队列</b><small>机器初筛 + 人工确认，结果可导出</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 三栏主内容区 -->
+  <div class="layout">
+
+    <!-- 左栏 -->
+    <aside class="col-left" aria-label="频道导航与筛选">
+      <div class="side-card">
+        <div class="side-title">频道导航</div>
+        <ul class="channel-nav">
+          <li><a href="/#intro" class="active">软件简介</a></li>
+          <li><a href="/#hot">热门内容 <span class="num">8</span></a></li>
+          <li><a href="/#update">最新更新 <span class="num">10</span></a></li>
+          <li><a href="/#category">分类入口 <span class="num">6</span></a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题 <span class="num">6</span></a></li>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#recommend">相关推荐</a></li>
+        </ul>
+      </div>
+      <div class="side-card">
+        <div class="side-title">内容筛选</div>
+        <div class="filter-group" id="filter-group">
+          <button class="filter-btn active" data-filter="all">全部</button>
+          <button class="filter-btn" data-filter="图片审核">图片审核</button>
+          <button class="filter-btn" data-filter="视频审核">视频审核</button>
+          <button class="filter-btn" data-filter="流程搭建">流程搭建</button>
+          <button class="filter-btn" data-filter="版本对比">版本对比</button>
+        </div>
+        <p class="filter-note">筛选“热门内容”板块中的卡片，点击按钮切换。</p>
+      </div>
+      <div class="side-card">
+        <div class="side-title">标签索引</div>
+        <div class="tag-cloud">
+          <a href="/#hot">图片视频筛查</a>
+          <a href="/#deep">电脑端审核工具</a>
+          <a href="/#guide">审核流程搭建</a>
+          <a href="/#faq">软件版本对比</a>
+          <a href="/#category">批量导入</a>
+          <a href="/#comments">人工复核</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 中栏 -->
+    <div class="col-main">
+
+      <!-- 1. 内容简介 -->
+      <section class="section" id="intro">
+        <div class="section-head">
+          <h2>鉴黄师电脑版官网 · 软件简介</h2>
+          <span class="sub">适用场景与核心能力</span>
+        </div>
+        <div class="intro-body">
+          <p><strong>鉴黄师电脑版官网</strong>是一个围绕内容审核软件电脑端使用、版本对比与场景指南的信息页面。它主要回答三个问题：这款工具在电脑端能做什么、适合哪些团队使用、不同版本之间如何选择。内容覆盖图片视频筛查、批量导入、审核流程搭建、人工复核队列等具体环节，帮助内容运营、社区管理和审核团队在部署前建立清晰认知。</p>
+          <p>从功能层面看，电脑端工具与移动端最大的不同在于处理批量任务的能力。图片审核支持一次导入数百张素材，按文件夹结构保留原始路径；视频审核则通过抽帧策略，把长视频拆解为可逐帧核验的片段。对于需要处理用户上传内容的社区、论坛、电商评价区，这种批量筛查方式能显著减少逐条打开的时间。页面中的“图片视频筛查”“电脑端审核工具”等标签，均指向这一核心用途。</p>
+          <p>审核流程搭建是另一个重点。工具本身不替代人工判断，而是把机器初筛结果整理成可排序的复核队列。运营人员可以按疑似程度、上传时间或来源渠道筛选，优先处理高风险条目。对于团队协作场景，队列支持多人分派与结果导出，便于形成“机器初筛—人工确认—结果归档”的闭环。页面在深度解析板块进一步说明队列参数与导出格式。</p>
+          <p>版本对比方面，电脑版通常分为基础版、团队版与定制版。基础版适合个人或小规模素材抽检；团队版增加多人协作、权限分配与批量导出；定制版面向有私有部署或接口对接需求的机构。不同版本在并发数量、抽帧频率、词库容量上存在差异，FAQ 板块以问答形式列出常见选择依据。页面所有示例数据仅用于展示结构，不构成真实报价或服务承诺。</p>
+        </div>
+      </section>
+
+      <!-- 2. 热门内容推荐 -->
+      <section class="section" id="hot">
+        <div class="section-head">
+          <h2>热门内容推荐</h2>
+          <span class="sub">按类型筛选 · 示例热度</span>
+        </div>
+        <div class="card-grid" id="hot-grid">
+          <article class="content-card" data-type="图片审核">
+            <span class="card-type hot">图片审核</span>
+            <h3>批量图片筛查：一次导入 500 张的文件夹结构</h3>
+            <div class="card-tags"><span>批量导入</span><span>路径保留</span><span>图片审核</span></div>
+            <p class="card-desc">讲解文件夹层级如何映射到审核结果，以及筛查后如何按原始目录导出，适合需要保留素材来源的团队。</p>
+            <div class="card-meta"><span>更新 07-18</span><b>热度 9.2</b></div>
+          </article>
+          <article class="content-card" data-type="视频审核">
+            <span class="card-type hot">视频审核</span>
+            <h3>视频抽帧策略：按秒与按关键帧的取舍</h3>
+            <div class="card-tags"><span>视频审核</span><span>抽帧频率</span><span>片段标记</span></div>
+            <p class="card-desc">对比两种抽帧方式的覆盖率与处理耗时，给出短视频、长视频、直播回放三种场景的参考参数。</p>
+            <div class="card-meta"><span>更新 07-15</span><b>热度 8.8</b></div>
+          </article>
+          <article class="content-card" data-type="流程搭建">
+            <span class="card-type new">流程搭建</span>
+            <h3>人工复核队列：排序规则与多人分派</h3>
+            <div class="card-tags"><span>复核队列</span><span>多人协作</span><span>审核流程</span></div>
+            <p class="card-desc">说明如何按疑似程度、上传时间排序，以及把队列分派给不同审核员的操作路径与注意事项。</p>
+            <div class="card-meta"><span>更新 07-12</span><b>热度 8.5</b></div>
+          </article>
+          <article class="content-card" data-type="版本对比">
+            <span class="card-type">版本对比</span>
+            <h3>基础版与团队版：并发数量与导出格式差异</h3>
+            <div class="card-tags"><span>版本对比</span><span>并发数量</span><span>结果导出</span></div>
+            <p class="card-desc">从单次处理量、多人同时使用、导出文件类型三个维度做对照，帮助小团队判断升级时机。</p>
+            <div class="card-meta"><span>更新 07-10</span><b>热度 8.1</b></div>
+          </article>
+          <article class="content-card" data-type="图片审核">
+            <span class="card-type">图片审核</span>
+            <h3>敏感词库自定义：图片内文字识别与匹配</h3>
+            <div class="card-tags"><span>图片审核</span><span>词库配置</span><span>文字识别</span></div>
+            <p class="card-desc">介绍如何导入自定义词库、设置匹配强度，以及处理误报时的调整方向，适用于社区评论截图审核。</p>
+            <div class="card-meta"><span>更新 07-08</span><b>热度 7.9</b></div>
+          </article>
+          <article class="content-card" data-type="视频审核">
+            <span class="card-type">视频审核</span>
+            <h3>直播回放审核：分段处理与时间戳标记</h3>
+            <div class="card-tags"><span>视频审核</span><span>直播回放</span><span>时间戳</span></div>
+            <p class="card-desc">长时段回放如何切分为可管理的片段，以及审核结果如何按时间戳回查原视频，减少重复观看。</p>
+            <div class="card-meta"><span>更新 07-05</span><b>热度 7.6</b></div>
+          </article>
+          <article class="content-card" data-type="流程搭建">
+            <span class="card-type">流程搭建</span>
+            <h3>审核结果归档：导出 CSV 与对接内部系统</h3>
+            <div class="card-tags"><span>结果导出</span><span>审核流程</span><span>归档</span></div>
+            <p class="card-desc">梳理导出字段含义、如何与内部工单系统对接，以及归档时保留哪些必要信息便于后续追溯。</p>
+            <div class="card-meta"><span>更新 07-02</span><b>热度 7.4</b></div>
+          </article>
+          <article class="content-card" data-type="版本对比">
+            <span class="card-type">版本对比</span>
+            <h3>定制版与标准版：私有部署前的检查清单</h3>
+            <div class="card-tags"><span>版本对比</span><span>私有部署</span><span>接口对接</span></div>
+            <p class="card-desc">列出网络环境、数据存储、接口权限三方面的准备事项，适合有内部系统对接需求的机构参考。</p>
+            <div class="card-meta"><span>更新 06-28</span><b>热度 7.1</b></div>
+          </article>
+        </div>
+        <p class="filter-note" id="filter-empty" style="display:none;margin-top:12px;">当前筛选条件下没有内容，请切换其他分类。</p>
+      </section>
+
+      <!-- 3. 最新更新 -->
+      <section class="section" id="update">
+        <div class="section-head">
+          <h2>最新更新与动态</h2>
+          <span class="sub">版本进展 · 功能调整</span>
+        </div>
+        <ul class="update-list">
+          <li><span class="u-name">v3.2 批量视频抽帧</span><span class="u-sum">新增按秒抽帧与关键帧混合模式，支持在任务开始前预估处理时长。</span><span class="u-time">07-18</span></li>
+          <li><span class="u-name">自定义敏感词库扩容</span><span class="u-sum">单项目词库上限提升至 2 万条，支持分组启停与匹配强度调节。</span><span class="u-time">07-15</span></li>
+          <li><span class="u-name">复核队列支持多人分派</span><span class="u-sum">管理员可将待复核条目按规则分派给不同审核员，并查看处理进度。</span><span class="u-time">07-12</span></li>
+          <li><span class="u-name">macOS 12+ 兼容优化</span><span class="u-sum">修复部分 M 系列芯片设备上图片预览偶发卡顿的问题。</span><span class="u-time">07-10</span></li>
+          <li><span class="u-name">导出字段扩展</span><span class="u-sum">CSV 导出新增“来源渠道”“审核耗时”两列，便于统计处理效率。</span><span class="u-time">07-08</span></li>
+          <li><span class="u-name">图片文字识别精度提升</span><span class="u-sum">针对截图类素材优化文字区域检测，降低小字号文字的漏检率。</span><span class="u-time">07-05</span></li>
+          <li><span class="u-name">任务暂停与断点续跑</span><span class="u-sum">长任务支持手动暂停，重新开始后从断点继续，减少重复计算。</span><span class="u-time">07-02</span></li>
+          <li><span class="u-name">审核结果筛选器</span><span class="u-sum">结果页新增按疑似等级、文件类型、处理状态组合筛选。</span><span class="u-time">06-28</span></li>
+          <li><span class="u-name">帮助文档重新组织</span><span class="u-sum">按“导入—筛查—复核—导出”流程重排目录，降低新用户查找成本。</span><span class="u-time">06-24</span></li>
+          <li><span class="u-name">日志记录粒度调整</span><span class="u-sum">操作日志增加任务参数快照，便于回溯某次审核使用的具体配置。</span><span class="u-time">06-20</span></li>
+        </ul>
+      </section>
+
+      <!-- 4. 分类入口 -->
+      <section class="section" id="category">
+        <div class="section-head">
+          <h2>分类入口</h2>
+          <span class="sub">按审核环节定位</span>
+        </div>
+        <div class="cat-grid">
+          <a href="/#hot" class="cat-item"><span class="cat-icon">图</span><span><b>图片审核</b><small>批量筛查与文字识别</small></span></a>
+          <a href="/#hot" class="cat-item"><span class="cat-icon">视</span><span><b>视频审核</b><small>抽帧策略与片段标记</small></span></a>
+          <a href="/#deep" class="cat-item"><span class="cat-icon">流</span><span><b>审核流程搭建</b><small>队列、分派与归档</small></span></a>
+          <a href="/#faq" class="cat-item"><span class="cat-icon">版</span><span><b>版本对比</b><small>基础版与团队版差异</small></span></a>
+          <a href="/#guide" class="cat-item"><span class="cat-icon">导</span><span><b>批量导入</b><small>文件夹结构与路径保留</small></span></a>
+          <a href="/#comments" class="cat-item"><span class="cat-icon">复</span><span><b>人工复核</b><small>排序规则与多人协作</small></span></a>
+        </div>
+      </section>
+
+      <!-- 5. 深度解析 -->
+      <section class="section" id="deep">
+        <div class="section-head">
+          <h2>深度解析：电脑端审核工具的工作方式</h2>
+          <span class="sub">从导入到导出的完整链路</span>
+        </div>
+        <div class="deep-body">
+          <h3>图片视频筛查的基本流程</h3>
+          <p>电脑端工具的核心链路可以概括为“导入—初筛—复核—导出”四步。导入阶段按文件夹结构读取素材，保留原始路径，方便后续追溯来源。初筛阶段根据预设规则对图片做内容识别与文字检测，对视频则先抽帧再逐帧判断。<strong>鉴黄师电脑版官网</strong>所描述的电脑端能力，主要围绕这条链路展开，强调批量处理与结果可整理。</p>
+          <p>与逐张打开查看相比，批量筛查把重复操作交给程序，人工只需要处理被标记的条目。这样做的直接好处是减少机械劳动，但前提是规则配置合理。规则过松会漏掉疑似内容，规则过紧则会增加复核量。实际操作中，建议先用小批量素材测试阈值，再逐步放大处理规模。</p>
+
+          <h3>图片审核：批量导入与文字识别</h3>
+          <p>图片审核的常见需求集中在两类素材：用户上传的图片和带文字的截图。前者依赖内容识别，后者需要文字检测配合敏感词库。电脑端工具通常支持一次导入整个文件夹，并按子目录保留分组。审核结果以列表形式呈现，每条记录包含文件路径、疑似等级和处理状态。</p>
+          <ul>
+            <li>批量导入支持 JPG、PNG、WebP 等常见格式，单次数量视版本而定。</li>
+            <li>文字识别可设置最小字号，减少背景噪点带来的误报。</li>
+            <li>敏感词库支持分组启停，便于在不同项目间切换规则。</li>
+            <li>结果列表可按疑似等级排序，优先处理高风险条目。</li>
+          </ul>
+
+          <h3>视频审核：抽帧策略与片段回查</h3>
+          <p>视频审核的难点在于时间维度。逐帧检查不现实，因此工具采用抽帧方式，把视频拆成若干静态画面再判断。抽帧频率越高，覆盖率越好，但处理耗时也越长。常见做法是短视频按秒抽帧，长视频按关键帧加固定间隔混合抽帧，直播回放则先分段再处理。</p>
+          <p>被标记的片段会保留时间戳，复核时可直接跳转到对应位置查看原视频，不需要从头播放。对于需要快速确认的场景，这一设计能明显减少回查时间。如果团队对漏检容忍度较低，可以适当提高抽帧频率，同时接受更长的处理等待。</p>
+
+          <h3>审核流程搭建：队列、分派与归档</h3>
+          <p>流程搭建关注的是“初筛之后怎么办”。电脑端工具把疑似条目整理成复核队列，管理员可以按疑似程度、上传时间或来源渠道排序，再把队列分派给不同审核员。每位审核员看到的是分配给自己的一部分，处理完成后结果回到总队列。</p>
+          <ol>
+            <li>设定初筛规则，明确哪些条目进入人工复核。</li>
+            <li>选择队列排序方式，优先处理高风险或有时效要求的条目。</li>
+            <li>按人员或小组分派任务，控制单次分配数量。</li>
+            <li>复核完成后统一导出，按需归档到内部系统。</li>
+          </ol>
+          <p>归档环节常被忽略，但它决定了后续能否追溯。建议导出时保留任务编号、审核时间、处理人和原始路径，这样即使隔一段时间回查，也能还原当时的判断依据。<strong>鉴黄师电脑版官网</strong>在版本对比部分也提到，团队版与定制版在导出字段和归档方式上存在差异。</p>
+
+          <h3>版本对比：从使用规模出发</h3>
+          <p>选择版本时，先看使用规模而非功能数量。个人或两三人小团队，基础版的并发数量和导出格式通常够用；需要多人同时处理、分派任务和权限管理的团队，再考虑团队版；有私有部署或内部系统对接需求的机构，才需要评估定制版。版本对比的关键指标包括单次处理量、同时在线人数、词库容量和导出字段丰富度。</p>
+          <p>另一个容易被忽略的因素是处理耗时。抽帧频率、词库规模、素材分辨率都会影响单次任务时长。在正式部署前，用一批有代表性的素材做试跑，比只看参数表更能判断版本是否匹配实际节奏。页面 FAQ 板块以问答形式补充了常见选择问题。</p>
+        </div>
+      </section>
+
+      <!-- 6. 体验指南 -->
+      <section class="section" id="guide">
+        <div class="section-head">
+          <h2>体验指南：从打开页面到找到答案</h2>
+          <span class="sub">页面结构与操作路径</span>
+        </div>
+        <ol class="step-list">
+          <li><b>先看首屏与软件简介</b>确认工具的基本定位与适用场景，判断是否属于自己需要的电脑端审核工具类型。</li>
+          <li><b>使用分类筛选缩小范围</b>在左栏“内容筛选”中选择图片审核、视频审核、流程搭建或版本对比，热门内容卡片会同步过滤。</li>
+          <li><b>查看深度解析</b>需要了解抽帧、队列、导出等具体环节时，进入深度解析板块按小标题阅读，每节控制在五段以内。</li>
+          <li><b>用 FAQ 解决选择问题</b>关于版本差异、适用人群、更新频率的常见疑问集中在问答折叠区，点击问题即可展开回答。</li>
+          <li><b>参考用户评论与资讯</b>评论反映不同使用视角，资讯记录功能调整与版本进展，可作为辅助判断。</li>
+          <li><b>移动端访问</b>窄屏下左栏频道转为横向导航，内容按单列排列，主要阅读区不依赖脚本即可完整查看。</li>
+        </ol>
+      </section>
+
+      <!-- 7. FAQ -->
+      <section class="section" id="faq">
+        <div class="section-head">
+          <h2>常见问题</h2>
+          <span class="sub">选择与使用参考</span>
+        </div>
+        <details class="faq-item" open>
+          <summary>鉴黄师电脑版适合什么人使用？</summary>
+          <div class="faq-body">适合需要批量处理图片或视频素材的内容团队，包括社区运营、论坛管理、电商评价区审核和内容平台风控人员。个人偶尔抽检素材也可以使用基础版，但工具的主要价值体现在批量导入和复核队列上。</div>
+        </details>
+        <details class="faq-item">
+          <summary>电脑版和移动端审核工具的主要区别是什么？</summary>
+          <div class="faq-body">电脑端侧重批量任务：一次导入大量文件、按文件夹保留路径、生成可排序的复核队列并导出结果。移动端更适合单条查看和即时处理。如果日常需要处理成百上千条素材，电脑端的处理效率更高。</div>
+        </details>
+        <details class="faq-item">
+          <summary>图片视频筛查一般多久更新一次规则库？</summary>
+          <div class="faq-body">规则库更新没有固定周期，取决于使用场景。团队版通常按月整理一次词库与阈值，遇到新的内容形态再临时调整。建议在每次大规模审核任务前，用小批量素材测试当前规则是否仍然适用。</div>
+        </details>
+        <details class="faq-item">
+          <summary>基础版和团队版在审核流程搭建上差在哪里？</summary>
+          <div class="faq-body">基础版支持单人队列和结果导出，适合一个人从头跟到尾。团队版增加多人分派、权限管理和更丰富的导出字段，适合需要把初筛、复核、归档拆给不同角色完成的团队。选择时先看是否有协作需求。</div>
+        </details>
+        <details class="faq-item">
+          <summary>视频抽帧频率设多少比较合适？</summary>
+          <div class="faq-body">短视频建议按秒抽帧，兼顾覆盖率和耗时；长视频可以用关键帧加固定间隔的混合方式；直播回放先分段再按段处理。抽帧频率越高漏检越少，但处理时间会相应增加，建议先用代表性素材试跑再定参数。</div>
+        </details>
+        <details class="faq-item">
+          <summary>审核结果可以导出到内部系统吗？</summary>
+          <div class="faq-body">标准版本支持导出 CSV 文件，包含文件路径、疑似等级、处理状态等字段，团队版和定制版字段更丰富。如果需要直接对接内部工单或数据库，属于定制版评估范围，需结合网络环境和接口权限做准备。</div>
+        </details>
+      </section>
+
+      <!-- 8. 用户评论 -->
+      <section class="section" id="comments">
+        <div class="section-head">
+          <h2>用户评论</h2>
+          <span class="sub">示例反馈 · 多视角</span>
+        </div>
+        <div class="comment-grid">
+          <div class="comment-card"><div class="comment-head"><span class="avatar">林</span><b>林间小径</b><span class="stars">★★★★★</span></div><p>批量导入保留文件夹路径这点很实用，筛查完按原目录导出，找素材不用重新翻。</p></div>
+          <div class="comment-card"><div class="comment-head"><span class="avatar">周</span><b>周末值班</b><span class="stars">★★★★☆</span></div><p>视频抽帧比预想快，长视频分段处理之后回查时间戳也方便，就是第一次配置花了点时间。</p></div>
+          <div class="comment-card"><div class="comment-head"><span class="avatar">陈</span><b>陈默</b><span class="stars">★★★★☆</span></div><p>团队版的多人分派解决了我们之前用表格手动记录的问题，进度一眼能看到。</p></div>
+          <div class="comment-card"><div class="comment-head"><span class="avatar">许</span><b>许工</b><span class="stars">★★★☆☆</span></div><p>敏感词库够用，但截图里小字号文字偶尔会漏，希望后续继续优化识别精度。</p></div>
+          <div class="comment-card"><div class="comment-head"><span class="avatar">赵</span><b>赵小满</b><span class="stars">★★★★★</span></div><p>基础版对我这种偶尔抽检的人足够了，导出 CSV 直接看，不用学太多配置。</p></div>
+          <div class="comment-card"><div class="comment-head"><span class="avatar">钱</span><b>钱塘观察</b><span class="stars">★★★★☆</span></div><p>复核队列排序逻辑清楚，按疑似等级优先处理，比之前从头翻到尾省力很多。</p></div>
+          <div class="comment-card"><div class="comment-head"><span class="avatar">孙</span><b>孙行者</b><span class="stars">★★★★☆</span></div><p>macOS 上跑了几天，图片预览卡顿问题修复后基本稳定，希望继续维护兼容性。</p></div>
+          <div class="comment-card"><div class="comment-head"><span class="avatar">李</span><b>李子树下</b><span class="stars">★★★★★</span></div><p>导出字段加了审核耗时之后，做月度统计方便不少，不用再自己算时间。</p></div>
+          <div class="comment-card"><div class="comment-head"><span class="avatar">吴</span><b>吴聊</b><span class="stars">★★★☆☆</span></div><p>功能没问题，就是初次配置阈值需要试几轮，建议官方多给一点场景参数参考。</p></div>
+          <div class="comment-card"><div class="comment-head"><span class="avatar">郑</span><b>郑在审核</b><span class="stars">★★★★☆</span></div><p>断点续跑对长任务友好，中途暂停去处理别的事，回来接着跑不用重来。</p></div>
+          <div class="comment-card"><div class="comment-head"><span class="avatar">王</span><b>王不留行</b><span class="stars">★★★★★</span></div><p>直播回放分段处理加时间戳标记，回查原视频确实快，适合有时效要求的场景。</p></div>
+          <div class="comment-card"><div class="comment-head"><span class="avatar">冯</span><b>冯虚御风</b><span class="stars">★★★★☆</span></div><p>词库分组启停很实用，不同项目切换规则不用反复导入导出。</p></div>
+          <div class="comment-card"><div class="comment-head"><span class="avatar">褚</span><b>褚小年</b><span class="stars">★★★★☆</span></div><p>帮助文档按导入到导出的流程重排之后，新同事上手快了不少。</p></div>
+          <div class="comment-card"><div class="comment-head"><span class="avatar">卫</span><b>卫蓝</b><span class="stars">★★★★★</span></div><p>结果列表组合筛选好用，按状态和等级一起筛，复核时目标更明确。</p></div>
+        </div>
+      </section>
+
+      <!-- 9. 相关资讯 -->
+      <section class="section" id="news">
+        <div class="section-head">
+          <h2>相关资讯</h2>
+          <span class="sub">功能调整与行业视角</span>
+        </div>
+        <ul class="news-list">
+          <li>
+            <span class="news-date">07-18</span>
+            <div class="news-content"><b>批量视频抽帧新增混合模式</b><span>新版本允许在同一任务中同时使用按秒抽帧与关键帧抽帧，适合时长差异较大的素材批次。</span></div>
+          </li>
+          <li>
+            <span class="news-date">07-12</span>
+            <div class="news-content"><b>复核队列分派功能上线</b><span>管理员可按小组或人员分配待复核条目，处理进度在总览页汇总显示，便于协调多人协作。</span></div>
+          </li>
+          <li>
+            <span class="news-date">07-05</span>
+            <div class="news-content"><b>图片文字识别优化截图场景</b><span>针对社区评论截图和聊天记录截图调整检测策略，小字号文字的漏检情况有所改善。</span></div>
+          </li>
+          <li>
+            <span class="news-date">06-28</span>
+            <div class="news-content"><b>导出字段新增审核耗时统计</b><span>CSV 导出增加处理耗时列，团队在做效率分析时可以直接使用，不必另行记录。</span></div>
+          </li>
+          <li>
+            <span class="news-date">06-24</span>
+            <div class="news-content"><b>帮助文档按审核流程重组</b><span>目录从按功能排列改为按“导入—筛查—复核—导出”流程排列，查找具体操作更直接。</span></div>
+          </li>
+          <li>
+            <span class="news-date">06-20</span>
+            <div class="news-content"><b>操作日志增加任务参数快照</b><span>每次任务记录当时使用的抽帧频率、词库版本等配置，方便回溯结果对应的具体设置。</span></div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 10. 相关推荐 -->
+      <section class="section" id="recommend">
+        <div class="section-head">
+          <h2>相关推荐</h2>
+          <span class="sub">按具体方向延伸</span>
+        </div>
+        <div class="rec-tags">
+          <a href="/#hot">图片批量筛查工作流</a>
+          <a href="/#hot">视频抽帧频率参考</a>
+          <a href="/#deep">人工复核队列搭建</a>
+          <a href="/#faq">基础版与团队版对比</a>
+          <a href="/#guide">批量导入文件夹结构</a>
+          <a href="/#news">审核结果导出字段说明</a>
+          <a href="/#comments">敏感词库分组配置</a>
+          <a href="/#update">直播回放分段审核</a>
+        </div>
+      </section>
+
+      <!-- 11. 精选证言 -->
+      <section class="section" id="voices">
+        <div class="section-head">
+          <h2>精选证言</h2>
+          <span class="sub">来自使用场景的反馈</span>
+        </div>
+        <div class="quote-panel">
+          <p>“我们每天要处理上千张用户上传图片和几十条短视频。电脑端的批量导入和复核队列把初筛和人工确认拆开，审核员只需要处理被标记的条目，整体节奏比之前顺畅很多。”</p>
+          <span class="who">—— 某社区内容运营负责人（示例证言）</span>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 右栏 -->
+    <aside class="col-right" aria-label="辅助阅读">
+      <div class="side-card">
+        <div class="side-title">本页目录</div>
+        <ul class="toc-list">
+          <li><a href="/#intro">软件简介</a></li>
+          <li><a href="/#hot">热门内容推荐</a></li>
+          <li><a href="/#update">最新更新与动态</a></li>
+          <li><a href="/#category">分类入口</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#recommend">相关推荐</a></li>
+        </ul>
+      </div>
+      <div class="side-card">
+        <div class="side-title">热门条目</div>
+        <ul class="hot-list">
+          <li><a href="/#hot">批量图片筛查：文件夹结构保留</a></li>
+          <li><a href="/#hot">视频抽帧策略：按秒还是按关键帧</a></li>
+          <li><a href="/#hot">复核队列排序与多人分派</a></li>
+          <li><a href="/#faq">基础版与团队版怎么选</a></li>
+          <li><a href="/#deep">审核结果导出与归档字段</a></li>
+        </ul>
+      </div>
+      <div class="side-card">
+        <div class="side-title">延伸阅读</div>
+        <ul class="side-links">
+          <li><a href="/#deep"><span class="arrow">▸</span> 从导入到导出的完整链路</a></li>
+          <li><a href="/#guide"><span class="arrow">▸</span> 页面筛选与移动端访问</a></li>
+          <li><a href="/#news"><span class="arrow">▸</span> 近期功能调整记录</a></li>
+          <li><a href="/#voices"><span class="arrow">▸</span> 使用场景证言</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<!-- 页尾 -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-text">鉴黄师电脑版官网</span>
+      <p>围绕内容审核软件电脑端的使用说明、版本对比与场景指南，帮助团队了解图片视频筛查与审核流程搭建的具体方式。</p>
+    </div>
+    <div class="footer-col">
+      <h4>内容板块</h4>
+      <ul>
+        <li><a href="/#intro">软件简介</a></li>
+        <li><a href="/#hot">热门内容推荐</a></li>
+        <li><a href="/#update">最新更新</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>使用参考</h4>
+      <ul>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#category">分类入口</a></li>
+        <li><a href="/#recommend">相关推荐</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>反馈与动态</h4>
+      <ul>
+        <li><a href="/#comments">用户评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#voices">精选证言</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 鉴黄师电脑版官网 · 内容示例站点</span>
+    <span class="example-note">部分内容为示例数据，仅用于展示页面结构</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // 分类筛选
+  var filterGroup = document.getElementById('filter-group');
+  var grid = document.getElementById('hot-grid');
+  var empty = document.getElementById('filter-empty');
+  if (filterGroup && grid) {
+    var cards = Array.prototype.slice.call(grid.querySelectorAll('.content-card'));
+    filterGroup.addEventListener('click', function (e) {
+      var btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      var val = btn.getAttribute('data-filter');
+      filterGroup.querySelectorAll('.filter-btn').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      var visible = 0;
+      cards.forEach(function (card) {
+        var type = card.getAttribute('data-type') || '';
+        var show = (val === 'all' || type === val);
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      if (empty) empty.style.display = visible === 0 ? 'block' : 'none';
+    });
+  }
+
+  // 本地搜索：过滤热门卡片 + 更新条目 + 新闻条目
+  var form = document.getElementById('search-form');
+  var input = document.getElementById('search-input');
+  if (form && input) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var q = input.value.trim().toLowerCase();
+      // 热门卡片
+      var cards = Array.prototype.slice.call(document.querySelectorAll('#hot-grid .content-card'));
+      cards.forEach(function (card) {
+        var text = card.textContent.toLowerCase();
+        card.style.display = (!q || text.indexOf(q) !== -1) ? '' : 'none';
+      });
+      // 更新条目
+      var updates = Array.prototype.slice.call(document.querySelectorAll('#update .update-list li'));
+      updates.forEach(function (li) {
+        var text = li.textContent.toLowerCase();
+        li.style.display = (!q || text.indexOf(q) !== -1) ? '' : 'none';
+      });
+      // 资讯条目
+      var news = Array.prototype.slice.call(document.querySelectorAll('#news .news-list li'));
+      news.forEach(function (li) {
+        var text = li.textContent.toLowerCase();
+        li.style.display = (!q || text.indexOf(q) !== -1) ? '' : 'none';
+      });
+      // 同步筛选按钮状态
+      if (filterGroup) {
+        filterGroup.querySelectorAll('.filter-btn').forEach(function (b) {
+          b.classList.toggle('active', b.getAttribute('data-filter') === 'all');
+        });
+      }
+      if (empty) {
+        var visibleCards = cards.filter(function (c) { return c.style.display !== 'none'; }).length;
+        empty.style.display = (visibleCards === 0 && q) ? 'block' : 'none';
+      }
+      // 滚动到热门内容
+      var hot = document.getElementById('hot');
+      if (hot) hot.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+})();
+</script>
+
+</body>
+  </html>
