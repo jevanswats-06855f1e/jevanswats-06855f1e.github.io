@@ -1,0 +1,988 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>无耻之徒第一季-美版家庭剧_剧情解析_角色关系</title>
+  <meta name="description" content="无耻之徒第一季聚焦芝加哥底层家庭 Gallagher 的混乱生存故事。提供分集剧情、角色关系梳理、经典片段回看与剧迷讨论，适合喜欢黑色家庭剧与底层叙事的观众。">
+  <meta name="keywords" content="美版无耻之徒,Gallagher家族,底层家庭剧,黑色喜剧,剧情解析">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231b3b2e'/%3E%3Cpath d='M8 22 L16 8 L24 22 Z' fill='%23e8b04b'/%3E%3Ccircle cx='16' cy='17' r='3' fill='%23f5f0e6'/%3E%3C/svg%3E">
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+  <style>
+    :root {
+      --bg: #f7f4ee;
+      --panel: #ffffff;
+      --ink: #1e2a26;
+      --muted: #5f6b66;
+      --line: #dcd6cb;
+      --brand: #1b3b2e;
+      --brand-soft: #2e5a47;
+      --accent: #e8b04b;
+      --accent-soft: #f6e3bf;
+      --rust: #b85c38;
+      --radius: 10px;
+      --shadow: 0 2px 10px rgba(27, 59, 46, 0.06);
+      --sticky-offset: 104px;
+      --font: "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--sticky-offset); }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--brand-soft); text-decoration: none; }
+    a:hover { color: var(--rust); }
+    ul { list-style: none; }
+    img, svg { display: block; max-width: 100%; }
+    button { font-family: inherit; cursor: pointer; }
+
+    .top-sticky {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+    }
+    .announcement {
+      background: var(--brand);
+      color: #f5f0e6;
+      font-size: 13px;
+      padding: 6px 0;
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+    .announcement span { color: var(--accent); font-weight: 600; }
+
+    .site-header {
+      background: rgba(247, 244, 238, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+    }
+    .header-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: -0.02em;
+      color: var(--brand);
+    }
+    .brand svg { width: 36px; height: 36px; flex-shrink: 0; }
+    .brand-text { white-space: nowrap; }
+
+    .header-nav {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      margin-left: auto;
+    }
+    .header-nav a {
+      padding: 5px 10px;
+      border-radius: 6px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .header-nav a:hover { background: var(--accent-soft); color: var(--brand); }
+
+    .search-wrap {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 3px 4px 3px 12px;
+      min-width: 200px;
+    }
+    .search-wrap input {
+      border: 0;
+      background: transparent;
+      font-size: 13px;
+      padding: 4px 0;
+      width: 130px;
+      outline: none;
+      color: var(--ink);
+    }
+    .search-wrap button {
+      border: 0;
+      background: var(--brand);
+      color: #fff;
+      border-radius: 16px;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .search-feedback {
+      font-size: 12px;
+      color: var(--muted);
+      padding: 2px 0 0 4px;
+      display: none;
+    }
+    .search-feedback.show { display: block; }
+
+    .hero {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 32px 24px 20px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+      color: var(--brand);
+      margin-bottom: 12px;
+    }
+    .hero-desc {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 560px;
+      margin-bottom: 22px;
+    }
+    .hero-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .pill {
+      background: var(--accent-soft);
+      color: #6b4f14;
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .pill.dark {
+      background: var(--brand);
+      color: #f5f0e6;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 9px 22px;
+      border-radius: 24px;
+      font-weight: 600;
+      font-size: 14px;
+      border: 1px solid transparent;
+      transition: background .15s;
+    }
+    .btn-primary { background: var(--brand); color: #fff; }
+    .btn-primary:hover { background: var(--brand-soft); color: #fff; }
+    .btn-outline { border-color: var(--line); background: #fff; color: var(--brand); }
+    .btn-outline:hover { background: #f0ece3; }
+
+    .hero-art {
+      background: var(--brand);
+      border-radius: 18px;
+      padding: 22px;
+      color: #f5f0e6;
+      position: relative;
+      overflow: hidden;
+      min-height: 210px;
+    }
+    .hero-art svg { width: 100%; height: auto; }
+    .hero-art-quote {
+      position: absolute;
+      bottom: 12px;
+      left: 22px;
+      right: 22px;
+      font-size: 13px;
+      opacity: 0.8;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding-top: 8px;
+    }
+
+    .layout {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 8px 24px 48px;
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr) 250px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .left-col, .right-col {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 8px);
+      font-size: 14px;
+    }
+
+    .side-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 14px 14px 12px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
+    }
+    .side-card h3 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    .side-card ul li { margin-bottom: 6px; }
+    .side-card ul li a {
+      display: block;
+      padding: 4px 8px;
+      border-radius: 5px;
+      color: var(--ink);
+      font-size: 13px;
+    }
+    .side-card ul li a:hover { background: var(--accent-soft); color: var(--brand); }
+
+    .toc-list li a {
+      display: flex;
+      gap: 6px;
+      font-size: 12.5px;
+    }
+    .toc-list li a::before { content: "▸"; color: var(--accent); }
+
+    .main-col { min-width: 0; }
+
+    .section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      margin-bottom: 22px;
+      box-shadow: var(--shadow);
+    }
+    .section h2 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--brand);
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section h2::before {
+      content: "";
+      width: 5px;
+      height: 20px;
+      background: var(--accent);
+      border-radius: 3px;
+      display: inline-block;
+    }
+    .section h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--brand-soft);
+      margin: 16px 0 8px;
+    }
+    .section p { margin-bottom: 10px; font-size: 14.5px; color: #2e3a35; }
+    .muted { color: var(--muted); font-size: 13px; }
+
+    .intro-text { font-size: 14.5px; line-height: 1.75; }
+    .intro-text strong { color: var(--brand); }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 14px;
+    }
+    .content-card {
+      background: #faf8f4;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .content-card:hover { border-color: var(--accent); box-shadow: 0 2px 8px rgba(232,176,75,0.15); }
+    .content-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--brand);
+      margin-bottom: 4px;
+      line-height: 1.35;
+    }
+    .content-card .meta-row {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin: 4px 0 6px;
+    }
+    .tag {
+      background: #eae5db;
+      color: #4a4a4a;
+      padding: 1px 8px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .tag.accent { background: var(--accent-soft); color: #6b4f14; }
+    .content-card p { font-size: 12.5px; color: var(--muted); margin-bottom: 6px; }
+    .content-card .stat { font-size: 11.5px; color: var(--muted); display: flex; gap: 10px; }
+
+    .update-list { display: flex; flex-direction: column; gap: 8px; }
+    .update-item {
+      display: flex;
+      gap: 12px;
+      align-items: baseline;
+      border-bottom: 1px dashed var(--line);
+      padding-bottom: 8px;
+      font-size: 14px;
+    }
+    .update-item:last-child { border-bottom: 0; padding-bottom: 0; }
+    .update-item .date { font-size: 12px; color: var(--muted); min-width: 58px; }
+    .update-item strong { color: var(--brand); }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 10px;
+    }
+    .category-item {
+      background: #f5f1e8;
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--brand);
+      border: 1px solid transparent;
+    }
+    .category-item:hover { border-color: var(--accent); background: #fff; }
+    .category-item small { display: block; font-weight: 400; font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+    .deep-dive p { font-size: 14.5px; }
+    .deep-dive ul { margin: 8px 0 14px 20px; }
+    .deep-dive ul li { font-size: 14px; margin-bottom: 6px; color: #2e3a35; }
+    .deep-dive ul li::marker { color: var(--accent); }
+
+    .guide-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      counter-reset: step;
+    }
+    .step {
+      background: #faf8f4;
+      border-radius: 8px;
+      padding: 14px;
+      border-left: 4px solid var(--accent);
+      font-size: 13.5px;
+    }
+    .step strong { display: block; color: var(--brand); margin-bottom: 2px; }
+
+    details {
+      border-bottom: 1px solid var(--line);
+      padding: 10px 0;
+    }
+    details:last-child { border-bottom: 0; }
+    summary {
+      font-weight: 600;
+      font-size: 14.5px;
+      color: var(--brand);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; font-size: 18px; color: var(--accent); font-weight: 400; }
+    details[open] summary::after { content: "−"; }
+    details p { padding-top: 8px; font-size: 13.5px; color: var(--muted); margin-bottom: 0; }
+
+    .comment-list { display: flex; flex-direction: column; gap: 10px; }
+    .comment-item {
+      display: flex;
+      gap: 10px;
+      font-size: 13.5px;
+      border-bottom: 1px dotted var(--line);
+      padding-bottom: 8px;
+    }
+    .comment-item:last-child { border-bottom: 0; }
+    .comment-avatar {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--accent-soft);
+      color: #6b4f14;
+      font-weight: 700;
+      font-size: 12px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .comment-body .name { font-weight: 700; color: var(--brand); font-size: 13px; }
+    .comment-body .text { color: #3e4a45; }
+
+    .news-list { display: flex; flex-direction: column; gap: 10px; }
+    .news-item { font-size: 13.5px; border-bottom: 1px dashed var(--line); padding-bottom: 8px; }
+    .news-item:last-child { border-bottom: 0; }
+    .news-item .news-date { font-size: 11.5px; color: var(--muted); }
+    .news-item strong { color: var(--brand); display: block; }
+
+    .rec-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .rec-tags a {
+      background: #f0ece3;
+      padding: 5px 12px;
+      border-radius: 16px;
+      font-size: 13px;
+      color: var(--brand);
+      font-weight: 500;
+    }
+    .rec-tags a:hover { background: var(--accent-soft); }
+
+    .right-col .hot-item { font-size: 13px; margin-bottom: 8px; display: flex; gap: 6px; }
+    .hot-item .num { color: var(--accent); font-weight: 800; min-width: 16px; }
+
+    .footer {
+      background: var(--brand);
+      color: #cfd8d3;
+      padding: 32px 24px 20px;
+      font-size: 13px;
+    }
+    .footer-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 24px;
+    }
+    .footer h4 { color: #fff; margin-bottom: 8px; font-size: 14px; }
+    .footer a { color: #b9c6bf; }
+    .footer a:hover { color: var(--accent); }
+    .footer ul li { margin-bottom: 4px; }
+    .footer-bottom {
+      max-width: 1360px;
+      margin: 20px auto 0;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      font-size: 12px;
+      color: #8fa398;
+    }
+
+    .search-highlight { background: var(--accent-soft); }
+
+    @media (max-width: 1080px) {
+      .layout { grid-template-columns: 160px minmax(0,1fr); }
+      .right-col { display: none; }
+      .hero { grid-template-columns: 1fr; gap: 20px; }
+    }
+    @media (max-width: 780px) {
+      .layout { grid-template-columns: 1fr; padding: 8px 16px 32px; gap: 16px; }
+      .left-col { position: static; display: flex; gap: 12px; overflow-x: auto; padding-bottom: 4px; }
+      .left-col .side-card { min-width: 150px; flex-shrink: 0; margin-bottom: 0; }
+      .header-inner { gap: 10px; }
+      .header-nav { order: 3; width: 100%; margin-left: 0; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; }
+      .search-wrap { margin-left: auto; }
+      .hero { padding: 20px 16px 8px; }
+      .hero h1 { font-size: 26px; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .section { padding: 16px; }
+    }
+    @media (max-width: 480px) {
+      .brand { font-size: 16px; }
+      .brand svg { width: 28px; height: 28px; }
+      .search-wrap input { width: 90px; }
+      .card-grid { grid-template-columns: 1fr; }
+      .category-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-sticky">
+    <div class="announcement" role="note">
+      <span>无耻之徒第一季</span> 角色关系图谱与分集看点已更新 · 底层家庭剧专题
+    </div>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="/#hero" class="brand" aria-label="无耻之徒第一季 首页">
+          <svg viewBox="0 0 36 36" aria-hidden="true">
+            <rect width="36" height="36" rx="7" fill="#1b3b2e"/>
+            <path d="M8 26 L18 8 L28 26 Z" fill="#e8b04b"/>
+            <circle cx="18" cy="20" r="3.6" fill="#f5f0e6"/>
+          </svg>
+          <span class="brand-text">无耻之徒第一季</span>
+        </a>
+        <nav class="header-nav" aria-label="主题导航">
+          <a href="/#intro">简介</a>
+          <a href="/#hot">热门推荐</a>
+          <a href="/#updates">最新动态</a>
+          <a href="/#category">分类</a>
+          <a href="/#deep">深度解析</a>
+          <a href="/#faq">问答</a>
+        </nav>
+        <div class="search-wrap">
+          <input type="text" id="searchInput" placeholder="搜索剧集 / 角色 / 看点" aria-label="站内搜索">
+          <button type="button" id="searchBtn">搜索</button>
+        </div>
+        <div class="search-feedback" id="searchFeedback"></div>
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <section class="hero" id="hero">
+      <div>
+        <h1>无耻之徒第一季</h1>
+        <p class="hero-desc">
+          用黑色幽默撕开芝加哥底层家庭的生存褶皱。Gallagher 一家在缺钱、缺爱、缺体面的日常里，
+          把混乱过成秩序，把无耻活成韧性。本页梳理第一季分集线索、角色关系与经典名场面，陪你重新看懂这部家庭剧的锋利与温度。
+        </p>
+        <div class="hero-meta">
+          <span class="pill dark">美版底层家庭剧</span>
+          <span class="pill">黑色喜剧</span>
+          <span class="pill">Gallagher 家族</span>
+          <span class="pill">第一季全12集</span>
+        </div>
+        <div class="hero-cta">
+          <a href="/#hot" class="btn btn-primary">查看热门条目</a>
+          <a href="/#deep" class="btn btn-outline">阅读深度解析</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 320 160" role="img" aria-label="Gallagher 家庭抽象视觉">
+          <rect x="10" y="20" width="300" height="110" rx="14" fill="#2e5a47"/>
+          <path d="M40 110 L90 40 L140 110 Z" fill="#e8b04b" opacity="0.9"/>
+          <path d="M160 110 L210 40 L260 110 Z" fill="#f5f0e6" opacity="0.85"/>
+          <circle cx="250" cy="36" r="12" fill="#b85c38"/>
+          <rect x="40" y="118" width="240" height="4" rx="2" fill="#f5f0e6" opacity="0.4"/>
+        </svg>
+        <p class="hero-art-quote">“我们什么都没有，所以什么都不怕失去。” —— 第一季台词意象</p>
+      </div>
+    </section>
+
+    <div class="layout">
+      <!-- 左栏 -->
+      <aside class="left-col" aria-label="频道与索引">
+        <div class="side-card">
+          <h3>频道导航</h3>
+          <ul>
+            <li><a href="/#intro">剧情简介</a></li>
+            <li><a href="/#hot">热门条目</a></li>
+            <li><a href="/#updates">最新动态</a></li>
+            <li><a href="/#category">分类筛选</a></li>
+            <li><a href="/#deep">深度解析</a></li>
+            <li><a href="/#guide">观看指南</a></li>
+            <li><a href="/#faq">常见问答</a></li>
+            <li><a href="/#comments">剧迷评论</a></li>
+            <li><a href="/#news">相关资讯</a></li>
+            <li><a href="/#rec">相关推荐</a></li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>关键词索引</h3>
+          <ul>
+            <li><a href="/#hot">Gallagher 家族</a></li>
+            <li><a href="/#hot">Frank 的生存法则</a></li>
+            <li><a href="/#hot">Fiona 撑家线</a></li>
+            <li><a href="/#deep">底层家庭剧</a></li>
+            <li><a href="/#deep">黑色喜剧</a></li>
+            <li><a href="/#faq">第一季结局</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- 中栏主内容 -->
+      <div class="main-col">
+        <!-- 板块1 内容简介 -->
+        <section class="section" id="intro">
+          <h2>剧情简介：芝加哥南区的生存样本</h2>
+          <div class="intro-text">
+            <p><strong>无耻之徒第一季</strong>将镜头对准芝加哥南区一个靠小聪明和彼此支撑活着的家庭。父亲 Frank 常年醉酒、缺席责任，长女 Fiona 不得不在二十岁出头扛起五个弟妹的吃穿用度。第一季用十二集篇幅铺开 Gallagher 一家与邻居、社工、学校、医院之间的拉扯，也把“穷人的体面”拆成无数具体选择。</p>
+            <p>从 Lip 靠替考赚外快，到 Ian 在预备役训练里隐藏性取向；从 Debbie 偷偷照顾邻居小孩，到 Carl 用极端方式理解规则——每个孩子都在用自己的方式填补家庭缺口。本页围绕 <strong>Gallagher 家族</strong> 的角色关系、<strong>底层家庭剧</strong> 的现实底色、以及第一季的分集看点展开，适合喜欢黑色喜剧与家庭叙事的观众按图索骥。</p>
+            <p>如果你正在找一部把贫穷、亲情和荒诞搅拌在一起的作品，第一季提供了足够密集的细节：Fiona 在洗衣房与酒吧之间奔忙，Steve 开着一辆来路不明的车闯入她的生活，Frank 则在每一次家庭危机里贡献相反方向的“解决方案”。这些情节并不提供答案，却让 <strong>无耻之徒第一季</strong> 成为理解后续人物走向的起点。</p>
+          </div>
+        </section>
+
+        <!-- 板块2 热门内容推荐 -->
+        <section class="section" id="hot">
+          <h2>热门条目：第一季高讨论片段与角色线</h2>
+          <div class="card-grid">
+            <article class="content-card">
+              <h4>Fiona 与 Steve 的初次相遇</h4>
+              <div class="meta-row"><span class="tag accent">感情线</span><span class="tag">Fiona</span><span class="tag">Steve</span></div>
+              <p>酒吧门口的搭讪如何变成一整季的拉扯与隐瞒，第一集就埋下伏笔。</p>
+              <div class="stat"><span>热度 9.2</span><span>更新至 S1E01</span></div>
+            </article>
+            <article class="content-card">
+              <h4>Lip 替考赚钱的名场面</h4>
+              <div class="meta-row"><span class="tag accent">生存智慧</span><span class="tag">Lip</span><span class="tag">校园线</span></div>
+              <p>用 SAT 替考撑起家庭开销，聪明与冒险在同一个决定里共存。</p>
+              <div class="stat"><span>热度 8.8</span><span>更新至 S1E03</span></div>
+            </article>
+            <article class="content-card">
+              <h4>Frank 缺席的家庭会议</h4>
+              <div class="meta-row"><span class="tag accent">家庭冲突</span><span class="tag">Frank</span><span class="tag">Gallagher家族</span></div>
+              <p>当父亲角色彻底失效，孩子们如何自己定规矩、分任务。</p>
+              <div class="stat"><span>热度 8.5</span><span>更新至 S1E05</span></div>
+            </article>
+            <article class="content-card">
+              <h4>Ian 与 Kash 的仓库秘密</h4>
+              <div class="meta-row"><span class="tag accent">身份线</span><span class="tag">Ian</span><span class="tag">Kash</span></div>
+              <p>第一季对 Ian 情感与身份的双线铺陈，在便利店仓库里悄然展开。</p>
+              <div class="stat"><span>热度 8.1</span><span>更新至 S1E06</span></div>
+            </article>
+            <article class="content-card">
+              <h4>Debbie 的“借娃”计划</h4>
+              <div class="meta-row"><span class="tag accent">成长线</span><span class="tag">Debbie</span><span class="tag">邻里</span></div>
+              <p>想证明自己能照顾人，却把邻居家的孩子卷进麻烦。</p>
+              <div class="stat"><span>热度 7.6</span><span>更新至 S1E07</span></div>
+            </article>
+            <article class="content-card">
+              <h4>Carl 与校园规则的碰撞</h4>
+              <div class="meta-row"><span class="tag accent">黑色幽默</span><span class="tag">Carl</span><span class="tag">校园线</span></div>
+              <p>用最直接的方式理解权力与交换，贡献第一季大量荒诞瞬间。</p>
+              <div class="stat"><span>热度 7.4</span><span>更新至 S1E08</span></div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 板块3 最新更新 -->
+        <section class="section" id="updates">
+          <h2>最新动态：第一季讨论与条目更新</h2>
+          <div class="update-list">
+            <div class="update-item"><span class="date">06-12</span><span><strong>Fiona 撑家线梳理</strong>：从洗衣房到酒吧，第一季里她做过的每一次取舍。</span></div>
+            <div class="update-item"><span class="date">06-10</span><span><strong>Frank 生存法则清单</strong>：逃避责任与偶尔闪现的温情如何并存。</span></div>
+            <div class="update-item"><span class="date">06-08</span><span><strong>Gallagher 家孩子分工图</strong>：谁管钱、谁管饭、谁管闯祸。</span></div>
+            <div class="update-item"><span class="date">06-05</span><span><strong>第一季第 7 集名场面回看</strong>：邻居派对上的家庭混战。</span></div>
+            <div class="update-item"><span class="date">06-02</span><span><strong>Steve 的可疑背景线</strong>：第一季给出的线索与未解疑问。</span></div>
+            <div class="update-item"><span class="date">05-29</span><span><strong>Lip 的聪明与代价</strong>：替考事件之后，家庭对他的期待变化。</span></div>
+            <div class="update-item"><span class="date">05-25</span><span><strong>Ian 的预备役训练线</strong>：隐藏与试探贯穿第一季。</span></div>
+            <div class="update-item"><span class="date">05-20</span><span><strong>南区邻里关系盘点</strong>：Kev 与 V 的酒吧如何成为半个客厅。</span></div>
+          </div>
+        </section>
+
+        <!-- 板块4 分类入口 -->
+        <section class="section" id="category">
+          <h2>分类入口：按内容方向找第一季看点</h2>
+          <div class="category-grid">
+            <a href="/#hot" class="category-item">角色关系线<small>Gallagher 家族成员拆解</small></a>
+            <a href="/#deep" class="category-item">底层家庭剧<small>贫穷叙事与生存策略</small></a>
+            <a href="/#hot" class="category-item">黑色喜剧名场面<small>荒诞与心酸并存</small></a>
+            <a href="/#deep" class="category-item">分集剧情看点<small>第一季逐集线索</small></a>
+            <a href="/#faq" class="category-item">第一季结局讨论<small>未解问题与后续走向</small></a>
+            <a href="/#comments" class="category-item">剧迷评论精选<small>真实感与争议点</small></a>
+            <a href="/#rec" class="category-item">相似剧集对比<small>同类型家庭剧参考</small></a>
+            <a href="/#guide" class="category-item">观看指南<small>入坑顺序与视角建议</small></a>
+          </div>
+        </section>
+
+        <!-- 板块5 深度解析正文 -->
+        <section class="section deep-dive" id="deep">
+          <h2>深度解析：第一季如何建立 Gallagher 的世界</h2>
+          <p>《无耻之徒》第一季并不是从“惨”开始的，而是从“忙”开始的。Fiona 在清晨的厨房里分配任务，孩子们各自找袜子、抢早餐、应付学校，Frank 则宿醉在客厅。这个开场定下了全季基调：<strong>无耻之徒第一季</strong> 关注的是底层家庭如何用有限资源维持运转，而不是单纯展示苦难。</p>
+          <h3>一、家庭作为最小经济单位</h3>
+          <p>在 Gallagher 家，钱不是背景道具，而是每一场冲突的导火索。电费、学费、罚款、啤酒钱，每一项都在挤压这个家庭。Fiona 的账本、Lip 的替考收入、Debbie 照顾邻居小孩换来的零钱，构成一张细密的现金流网。第一季反复让观众看到：所谓家庭责任，在这里首先是“今天谁把饭端上桌”。</p>
+          <p>这种经济视角也解释了为什么每个孩子都过早成熟。Ian 去预备役训练，既为了身份也为了补贴；Carl 在学校里用最原始的方式解决冲突，因为家里没有多余的耐心去教他更迂回的办法。<strong>Gallagher 家族</strong> 的凝聚力并非来自温情宣言，而是来自共同面对账单和麻烦时的默契。</p>
+          <h3>二、Frank 的功能：缺席的父亲与在场的问题</h3>
+          <p>Frank 在第一季里很少承担传统父亲职责，但他几乎出现在每一场家庭危机的边缘。他的价值不是提供解决方案，而是把问题放大，迫使孩子们提前学会判断。比如他临时起意带孩子们去“搞钱”，结果往往让局面更糟，但也让 Lip 和 Fiona 更清楚什么路不能走。</p>
+          <ul>
+            <li>Frank 的生存哲学：能拖就拖，能赖就赖，但偶尔说出真话。</li>
+            <li>Fiona 的应对方式：先稳住基本盘，再处理父亲留下的烂摊子。</li>
+            <li>孩子们的观察：父亲不可靠，但家庭不能散。</li>
+          </ul>
+          <h3>三、邻居与社区：南区不是背景板</h3>
+          <p>Kev 和 V 的酒吧承担了半个社区客厅的功能。Fiona 在这里换班、倾诉、躲避，也在这里重新确认自己的位置。第一季用大量生活化场景说明：<strong>底层家庭剧</strong> 的张力不只来自家庭内部，也来自邻里之间的互相兜底与彼此消耗。Steve 的出现同样如此——他带来外部资源，也带来新的不确定性。</p>
+          <p>从类型上看，第一季把黑色喜剧的节奏嵌进家庭剧的骨架：笑点往往来自窘迫，泪点常常来自逞强。观众如果带着“看惨”的预期进入，可能会被它的荒诞节奏打断；但如果接受这种混合语气，就会发现它对贫穷与亲情的观察相当具体。这也是 <strong>无耻之徒第一季</strong> 在多年后仍被反复讨论的原因。</p>
+        </section>
+
+        <!-- 板块6 体验指南 -->
+        <section class="section" id="guide">
+          <h2>观看与浏览指南</h2>
+          <div class="guide-steps">
+            <div class="step"><strong>先看角色关系</strong>从 Fiona、Lip、Ian 三条线入手，再补 Frank 与邻居线，更容易进入第一季的叙事节奏。</div>
+            <div class="step"><strong>按分类筛选</strong>本页分类入口对应角色、名场面、分集看点与结局讨论，点击即可定位到对应内容区。</div>
+            <div class="step"><strong>移动端阅读</strong>窄屏下频道导航转为横向滑动，正文保持舒适行距，可单手浏览。</div>
+            <div class="step"><strong>收藏与追更</strong>使用浏览器书签保存本页，后续更新集中在“最新动态”与相关推荐区域。</div>
+            <div class="step"><strong>扩展路径</strong>从热门条目进入深度解析，再从 FAQ 和评论理解其他观众的关注点。</div>
+            <div class="step"><strong>搜索查找</strong>页头搜索框支持本地内容筛选，输入角色名或关键词可快速定位。</div>
+          </div>
+        </section>
+
+        <!-- 板块7 FAQ -->
+        <section class="section" id="faq">
+          <h2>常见问答</h2>
+          <details>
+            <summary>无耻之徒第一季是什么类型的剧？适合什么人看？</summary>
+            <p>它是一部带有黑色喜剧气质的家庭剧，聚焦底层家庭的经济压力与亲情拉扯。适合喜欢《无耻之徒》系列、对底层叙事和角色群像感兴趣的观众，也适合想看非传统家庭剧的人。</p>
+          </details>
+          <details>
+            <summary>第一季主要围绕哪些角色展开？</summary>
+            <p>核心是 Gallagher 一家：长女 Fiona、长子 Lip、次子 Ian、女儿 Debbie、小儿子 Carl，以及父亲 Frank。邻居 Kev、V 和 Steve 也在第一季中占据重要戏份。</p>
+          </details>
+          <details>
+            <summary>第一季的结局讲了什么？</summary>
+            <p>第一季结尾把家庭危机与感情选择同时推到台前，Fiona 面临关系抉择，Frank 依旧状况不断，孩子们各自的问题没有完全解决，为后续季留下多条线索。</p>
+          </details>
+          <details>
+            <summary>美版无耻之徒第一季和英版有什么区别？</summary>
+            <p>美版在第一季已经将故事背景移植到芝加哥南区，角色关系与节奏更贴近美式家庭剧语法；英版则更早建立其独特的粗粝幽默。两者共享核心设定，但人物细节与推进方式不同。</p>
+          </details>
+          <details>
+            <summary>第一季里 Frank 的戏份多吗？</summary>
+            <p>Frank 贯穿全季，但他更多以“问题制造者”和“间歇性父亲”的身份出现。他的戏份集中在家庭危机节点，而不是日常陪伴。</p>
+          </details>
+          <details>
+            <summary>第一季大概多久能看完？</summary>
+            <p>第一季共 12 集，按每集约 45—55 分钟估算，连续观看约需 9—11 小时。适合分几次看完，便于消化角色关系。</p>
+          </details>
+        </section>
+
+        <!-- 板块8 用户评论 -->
+        <section class="section" id="comments">
+          <h2>剧迷评论</h2>
+          <div class="comment-list">
+            <div class="comment-item"><div class="comment-avatar">南</div><div class="comment-body"><span class="name">南区老租客</span><span class="text">：第一季最抓人的不是惨，是那种“今天也得过下去”的劲头。</span></div></div>
+            <div class="comment-item"><div class="comment-avatar">F</div><div class="comment-body"><span class="name">Fiona的围裙</span><span class="text">：Fiona 和 Steve 的线看得人又甜又慌，第一季把她的疲惫拍得很具体。</span></div></div>
+            <div class="comment-item"><div class="comment-avatar">L</div><div class="comment-body"><span class="name">Lip的草稿纸</span><span class="text">：Lip 替考那段笑出声又有点心酸，聪明在这种家庭里也是消耗品。</span></div></div>
+            <div class="comment-item"><div class="comment-avatar">I</div><div class="comment-body"><span class="name">Ian的迷彩</span><span class="text">：Ian 第一季的试探和隐藏写得很克制，没有刻意煽情。</span></div></div>
+            <div class="comment-item"><div class="comment-avatar">D</div><div class="comment-body"><span class="name">Debbie的零钱罐</span><span class="text">：Debbie 借邻居小孩那段有点好笑又有点心疼。</span></div></div>
+            <div class="comment-item"><div class="comment-avatar">C</div><div class="comment-body"><span class="name">Carl的弹弓</span><span class="text">：Carl 的线第一季还比较散，但偶尔冒出来的狠劲很抢戏。</span></div></div>
+            <div class="comment-item"><div class="comment-avatar">K</div><div class="comment-body"><span class="name">Kev的啤酒杯</span><span class="text">：Kev 和 V 的酒吧像另一个客厅，邻居线让南区更真实。</span></div></div>
+            <div class="comment-item"><div class="comment-avatar">V</div><div class="comment-body"><span class="name">V的记账本</span><span class="text">：第一季节奏不拖，几乎每集都有一场家庭混战。</span></div></div>
+            <div class="comment-item"><div class="comment-avatar">F</div><div class="comment-body"><span class="name">Frank的空酒瓶</span><span class="text">：Frank 这个角色真的让人又气又没法完全讨厌。</span></div></div>
+            <div class="comment-item"><div class="comment-avatar">S</div><div class="comment-body"><span class="name">Steve的车钥匙</span><span class="text">：Steve 的身份线第一季给得比较模糊，反而增加了悬念。</span></div></div>
+            <div class="comment-item"><div class="comment-avatar">北</div><div class="comment-body"><span class="name">北区路人</span><span class="text">：之前没看过美版，从第一季入坑，角色关系确实需要理一理。</span></div></div>
+            <div class="comment-item"><div class="comment-avatar">J</div><div class="comment-body"><span class="name">J大排档</span><span class="text">：黑色幽默的度拿捏得不错，不会让人一直沉重。</span></div></div>
+          </div>
+        </section>
+
+        <!-- 板块9 相关资讯 -->
+        <section class="section" id="news">
+          <h2>相关资讯</h2>
+          <div class="news-list">
+            <div class="news-item"><span class="news-date">2025-06-11</span><strong>美版《无耻之徒》第一季角色关系图谱更新</strong>Gallagher 家孩子分工与邻里关系线整理，方便新观众快速进入剧情。</div>
+            <div class="news-item"><span class="news-date">2025-06-07</span><strong>底层家庭剧为何持续吸引观众</strong>从第一季的生存叙事看家庭剧对现实压力的回应方式。</div>
+            <div class="news-item"><span class="news-date">2025-06-03</span><strong>第一季第 7 集聚会混战片段被反复讨论</strong>观众对这场戏的喜剧节奏与家庭冲突处理给出不同评价。</div>
+            <div class="news-item"><span class="news-date">2025-05-30</span><strong>Gallagher 家族角色线盘点：谁在第一季最让人意外</strong>从 Lip 的替考到 Debbie 的借娃，孩子们的主动性成为焦点。</div>
+            <div class="news-item"><span class="news-date">2025-05-26</span><strong>黑色喜剧与家庭剧的边界在哪</strong>以第一季为例，讨论笑声与困境如何共存。</div>
+            <div class="news-item"><span class="news-date">2025-05-21</span><strong>第一季结局留下的角色悬念</strong>Fiona 的关系选择与 Frank 的下一步，成为剧迷讨论热点。</div>
+          </div>
+        </section>
+
+        <!-- 板块10 相关推荐 -->
+        <section class="section" id="rec">
+          <h2>相关推荐：继续探索同类型内容</h2>
+          <div class="rec-tags">
+            <a href="/#hot">Gallagher 家族关系线</a>
+            <a href="/#deep">底层家庭剧专题</a>
+            <a href="/#hot">Fiona 撑家名场面</a>
+            <a href="/#deep">黑色喜剧叙事</a>
+            <a href="/#faq">第一季结局讨论</a>
+            <a href="/#guide">观看顺序建议</a>
+            <a href="/#news">角色线资讯</a>
+            <a href="/#comments">剧迷真实评论</a>
+          </div>
+        </section>
+
+        <!-- 板块11 精选内容 / 时间线 -->
+        <section class="section" id="timeline">
+          <h2>第一季时间线：从开场到季终</h2>
+          <div class="update-list">
+            <div class="update-item"><span class="date">E01</span><span><strong>开场与 Fiona 的日常</strong>：家庭分工、Frank 宿醉、Steve 出现。</span></div>
+            <div class="update-item"><span class="date">E02—E04</span><span><strong>钱与麻烦交织</strong>：Lip 替考、Ian 训练、Debbie 的邻居计划。</span></div>
+            <div class="update-item"><span class="date">E05—E08</span><span><strong>家庭冲突升级</strong>：Frank 的干预、Fiona 的感情拉扯、社区事件。</span></div>
+            <div class="update-item"><span class="date">E09—E12</span><span><strong>季终走向</strong>：关系选择、家庭危机未解、后续线索铺开。</span></div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 右栏 -->
+      <aside class="right-col" aria-label="辅助阅读">
+        <div class="side-card">
+          <h3>页内目录</h3>
+          <ul class="toc-list">
+            <li><a href="/#intro">剧情简介</a></li>
+            <li><a href="/#hot">热门条目</a></li>
+            <li><a href="/#updates">最新动态</a></li>
+            <li><a href="/#category">分类入口</a></li>
+            <li><a href="/#deep">深度解析</a></li>
+            <li><a href="/#guide">观看指南</a></li>
+            <li><a href="/#faq">常见问答</a></li>
+            <li><a href="/#comments">剧迷评论</a></li>
+            <li><a href="/#news">相关资讯</a></li>
+            <li><a href="/#rec">相关推荐</a></li>
+            <li><a href="/#timeline">第一季时间线</a></li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>热门条目</h3>
+          <div class="hot-item"><span class="num">1</span><a href="/#hot">Fiona 与 Steve 初次相遇</a></div>
+          <div class="hot-item"><span class="num">2</span><a href="/#hot">Lip 替考赚钱名场面</a></div>
+          <div class="hot-item"><span class="num">3</span><a href="/#hot">Frank 缺席的家庭会议</a></div>
+          <div class="hot-item"><span class="num">4</span><a href="/#hot">Ian 与 Kash 的仓库秘密</a></div>
+          <div class="hot-item"><span class="num">5</span><a href="/#hot">Debbie 的“借娃”计划</a></div>
+          <div class="hot-item"><span class="num">6</span><a href="/#hot">Carl 与校园规则碰撞</a></div>
+        </div>
+        <div class="side-card">
+          <h3>延伸阅读</h3>
+          <ul>
+            <li><a href="/#deep">Gallagher 家族经济账</a></li>
+            <li><a href="/#deep">Frank 的生存哲学</a></li>
+            <li><a href="/#news">底层家庭剧观察</a></li>
+            <li><a href="/#faq">第一季结局悬念</a></li>
+            <li><a href="/#guide">入坑观看顺序</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <h4>无耻之徒第一季</h4>
+        <p>聚焦 Gallagher 家族与芝加哥南区底层生存故事，提供角色关系、分集看点与剧迷讨论入口。</p>
+      </div>
+      <div>
+        <h4>内容频道</h4>
+        <ul>
+          <li><a href="/#intro">剧情简介</a></li>
+          <li><a href="/#hot">热门条目</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>快速索引</h4>
+        <ul>
+          <li><a href="/#category">分类入口</a></li>
+          <li><a href="/#comments">剧迷评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#rec">相关推荐</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>专题标签</h4>
+        <ul>
+          <li><a href="/#hot">Gallagher 家族</a></li>
+          <li><a href="/#deep">底层家庭剧</a></li>
+          <li><a href="/#deep">黑色喜剧</a></li>
+          <li><a href="/#faq">第一季结局</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>部分内容为示例数据，仅用于展示页面结构。 © 2025 无耻之徒第一季 主题页</p>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      const searchInput = document.getElementById('searchInput');
+      const searchBtn = document.getElementById('searchBtn');
+      const feedback = document.getElementById('searchFeedback');
+      const mainCol = document.querySelector('.main-col');
+      if (!mainCol) return;
+
+      function clearHighlights() {
+        mainCol.querySelectorAll('.search-highlight').forEach(el => {
+          const parent = el.parentNode;
+          if (parent) {
+            parent.replaceChild(document.createTextNode(el.textContent), el);
+            parent.normalize();
+          }
+        });
+      }
+
+      function highlightText(node, term) {
+        if (node.nodeType === Node.TEXT_NODE) {
+          const text = node.textContent;
+          const lower = text.toLowerCase();
+          const idx = lower.indexOf(term.toLowerCase());
+          if (idx === -1) return;
+          const span = document.createElement('span');
+          span.className = 'search-highlight';
+          span.textContent = text.slice(idx, idx + term.length);
+          const after = node.splitText(idx);
+          after.textContent = after.textContent.slice(term.length);
+          node.parentNode.insertBefore(span, after);
+        } else if (node.nodeType === Node.ELEMENT_NODE && node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE') {
+          Array.from(node.childNodes).forEach(child => highlightText(child, term));
+        }
+      }
+
+      function doSearch() {
+        const term = searchInput.value.trim();
+        clearHighlights();
+        feedback.classList.remove('show');
+        feedback.textContent = '';
+        if (!term) return;
+
+        const lowerTerm = term.toLowerCase();
+        const text = mainCol.innerText.toLowerCase();
+        if (!text.includes(lowerTerm)) {
+          feedback.textContent = '未找到与“' + term + '”相关的内容，请尝试其他角色名或关键词。';
+          feedback.classList.add('show');
+          return;
+        }
+
+        // 对文本节点高亮
+        const walker = document.createTreeWalker(
+          mainCol,
+          NodeFilter.SHOW_TEXT,
+          {
+            acceptNode: function(node) {
+              const p = node.parentNode;
+              if (!p) return NodeFilter.FILTER_REJECT;
+              if (['SCRIPT','STYLE','MARK'].includes(p.nodeName)) return NodeFilter.FILTER_REJECT;
+              if (node.textContent.trim() === '') return NodeFilter.FILTER_REJECT;
+              return NodeFilter.FILTER_ACCEPT;
+            }
+          }
+        );
+        const textNodes = [];
+        while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+        textNodes.forEach(node => {
+          const content = node.textContent;
+          if (content.toLowerCase().includes(lowerTerm)) {
+            highlightText(node, term);
+          }
+        });
+
+        // 滚动到第一个高亮处
+        const firstHighlight = mainCol.querySelector('.search-highlight');
+        if (firstHighlight) {
+          firstHighlight.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          feedback.textContent = '已定位到与“' + term + '”相关的内容。';
+          feedback.classList.add('show');
+        }
+      }
+
+      searchBtn.addEventListener('click', doSearch);
+      searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          doSearch();
+        }
+      });
+      searchInput.addEventListener('input', function() {
+        if (!searchInput.value.trim()) {
+          clearHighlights();
+          feedback.classList.remove('show');
+          feedback.textContent = '';
+        }
+      });
+    })();
+  </script>
+</body>
+  </html>
